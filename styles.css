@@ -1614,8 +1614,7 @@ section {
     }
     
     .browser-url {
-        font-size: var(--font-size-xs);
-        padding: var(--spacing-1) var(--spacing-2);
+        display: none;
     }
     
     .control {
