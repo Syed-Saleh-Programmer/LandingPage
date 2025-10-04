@@ -260,7 +260,7 @@ body {
 }
 
 .hero-title {
-    font-size: clamp(var(--font-size-4xl), 5vw, var(--font-size-5xl));
+    font-size: clamp(3rem, 6vw, 4rem);
     font-weight: 700;
     line-height: 1.1;
     margin-bottom: var(--spacing-6);
@@ -557,9 +557,16 @@ body {
     position: absolute;
     border-radius: 50%;
     background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-    opacity: 0.1;
+    opacity: 0.3;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 12px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* Particle Animations */
@@ -641,85 +648,136 @@ body {
     }
 }
 
-/* Individual Particle Styles */
+/* Individual Particle Styles with Social Media Icons */
 .particle-1 {
-    width: 8px;
-    height: 8px;
+    width: 35px;
+    height: 35px;
     left: 10%;
     animation: float-up 12s infinite;
     animation-delay: -2s;
+    background: linear-gradient(45deg, #0077b5, #005885);
+}
+
+.particle-1 i {
+    font-size: 28px;
 }
 
 .particle-2 {
-    width: 6px;
-    height: 6px;
+    width: 30px;
+    height: 30px;
     left: 20%;
     animation: float-diagonal 15s infinite;
     animation-delay: -5s;
+    background: linear-gradient(45deg, #1877f2, #166fe5);
+}
+
+.particle-2 i {
+    font-size: 24px;
 }
 
 .particle-3 {
-    width: 12px;
-    height: 12px;
+    width: 40px;
+    height: 40px;
     left: 30%;
     animation: float-zigzag 18s infinite;
     animation-delay: -8s;
+    background: linear-gradient(45deg, #1da1f2, #1a91da);
+}
+
+.particle-3 i {
+    font-size: 32px;
 }
 
 .particle-4 {
-    width: 4px;
-    height: 4px;
+    width: 28px;
+    height: 28px;
     left: 40%;
     animation: float-up 10s infinite;
     animation-delay: -1s;
+    background: linear-gradient(45deg, #e4405f, #c13584);
+}
+
+.particle-4 i {
+    font-size: 22px;
 }
 
 .particle-5 {
-    width: 10px;
-    height: 10px;
+    width: 38px;
+    height: 38px;
     left: 50%;
     animation: pulse-float 14s infinite;
     animation-delay: -7s;
+    background: linear-gradient(45deg, #ff0000, #cc0000);
+}
+
+.particle-5 i {
+    font-size: 30px;
 }
 
 .particle-6 {
-    width: 6px;
-    height: 6px;
+    width: 32px;
+    height: 32px;
     left: 60%;
     animation: float-diagonal 16s infinite;
     animation-delay: -3s;
+    background: linear-gradient(45deg, #000000, #333333);
+}
+
+.particle-6 i {
+    font-size: 26px;
 }
 
 .particle-7 {
-    width: 8px;
-    height: 8px;
+    width: 36px;
+    height: 36px;
     left: 70%;
     animation: float-up 13s infinite;
     animation-delay: -9s;
+    background: linear-gradient(45deg, #bd081c, #9d0718);
+}
+
+.particle-7 i {
+    font-size: 28px;
 }
 
 .particle-8 {
-    width: 5px;
-    height: 5px;
+    width: 29px;
+    height: 29px;
     left: 80%;
     animation: float-zigzag 11s infinite;
     animation-delay: -4s;
+    background: linear-gradient(45deg, #ff4500, #cc3700);
+}
+
+.particle-8 i {
+    font-size: 23px;
 }
 
 .particle-9 {
-    width: 14px;
-    height: 14px;
+    width: 42px;
+    height: 42px;
     left: 90%;
     animation: pulse-float 17s infinite;
     animation-delay: -6s;
+    background: linear-gradient(45deg, #5865f2, #4752c4);
+}
+
+.particle-9 i {
+    font-size: 34px;
 }
 
 .particle-10 {
-    width: 7px;
-    height: 7px;
+    width: 33px;
+    height: 33px;
     left: 85%;
     animation: float-diagonal 12s infinite;
     animation-delay: -10s;
+    background: linear-gradient(45deg, #fffc00, #ccca00);
+}
+
+.particle-10 i {
+    font-size: 26px;
+    color: #333;
 }
 
 /* Shimmer animations removed - keeping only particle effects */
@@ -1436,7 +1494,7 @@ section {
     }
     
     .hero-title {
-        font-size: var(--font-size-4xl);
+        font-size: clamp(2.8rem, 5.5vw, 3.5rem);
     }
 }
 
@@ -1480,7 +1538,7 @@ section {
     }
     
     .hero-title {
-        font-size: var(--font-size-4xl);
+        font-size: clamp(2.5rem, 5vw, 3rem);
     }
     
     .hero-description {
@@ -1536,7 +1594,7 @@ section {
     }
     
     .hero-title {
-        font-size: var(--font-size-3xl);
+        font-size: clamp(2.2rem, 4.5vw, 2.8rem);
         margin-bottom: var(--spacing-4);
     }
     
@@ -1586,7 +1644,12 @@ section {
     
     /* Reduce particle effects on mobile for performance */
     .particle {
-        opacity: 0.05;
+        opacity: 0.15;
+        transform: scale(0.7);
+    }
+    
+    .particle i {
+        font-size: 16px !important;
     }
 
 
@@ -1709,7 +1772,7 @@ section {
     }
     
     .hero-title {
-        font-size: var(--font-size-3xl);
+        font-size: clamp(2rem, 4vw, 2.5rem);
     }
     
     .hero-buttons {
@@ -1847,8 +1910,47 @@ html {
 
 /* Dark Mode Particle Effects */
 [data-theme="dark"] .particle {
-    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-    opacity: 0.15;
+    opacity: 0.25;
+}
+
+[data-theme="dark"] .particle-1 {
+    background: linear-gradient(45deg, #0077b5, #005885);
+}
+
+[data-theme="dark"] .particle-2 {
+    background: linear-gradient(45deg, #1877f2, #166fe5);
+}
+
+[data-theme="dark"] .particle-3 {
+    background: linear-gradient(45deg, #1da1f2, #1a91da);
+}
+
+[data-theme="dark"] .particle-4 {
+    background: linear-gradient(45deg, #e4405f, #c13584);
+}
+
+[data-theme="dark"] .particle-5 {
+    background: linear-gradient(45deg, #ff0000, #cc0000);
+}
+
+[data-theme="dark"] .particle-6 {
+    background: linear-gradient(45deg, #000000, #333333);
+}
+
+[data-theme="dark"] .particle-7 {
+    background: linear-gradient(45deg, #bd081c, #9d0718);
+}
+
+[data-theme="dark"] .particle-8 {
+    background: linear-gradient(45deg, #ff4500, #cc3700);
+}
+
+[data-theme="dark"] .particle-9 {
+    background: linear-gradient(45deg, #5865f2, #4752c4);
+}
+
+[data-theme="dark"] .particle-10 {
+    background: linear-gradient(45deg, #fffc00, #ccca00);
 }
 
 /* Dark Mode Browser Mockup */
